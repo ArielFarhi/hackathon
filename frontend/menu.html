@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trivia Game Menu</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>Welcome, <span id="username"></span>!</h1>
+    <div class="controls">
+      <select id="difficulty" aria-label="Select difficulty">
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+      <input type="search" placeholder="Search categories..." id="search" aria-label="Search categories">
+    </div>
+  </header>
+
+  <main>
+    <h2>Select a Category</h2>
+    <ul id="category-list">
+      <li>History</li>
+      <li>Mathematics</li>
+      <li>Physics</li>
+      <li>Biology</li>
+      <li>Geography</li>
+      <li>Sports</li>
+      <li>Current Affairs</li>
+      <li>Chemistry</li>
+      <li>Language</li>
+    </ul>
+  </main>
+
+  <footer>
+    <nav>
+      <a href="#home">🏠 Home</a>
+      <a href="#leaderboard">📊 Leaderboard</a>
+      <a href="#profile">👤 Profile</a>
+    </nav>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
