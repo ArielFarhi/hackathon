@@ -8,6 +8,22 @@ const userSchema = new Schema(
     password: { type: String, required: true },
     image: { type: String },
     points: { type: Number, default: 0 },
+    gameHistory: [
+      {
+        date: { type: Date },
+        score: { type: Number },
+        difficulty: {
+          type: String,
+          required: true,
+          enum: ["easy", "medium", "hard"],
+        },
+      },
+    ],
+    totalScores: {
+      easy: { type: Number, default: 0 },
+      medium: { type: Number, default: 0 },
+      hard: { type: Number, default: 0 },
+    },
   },
   { collection: "users" }
 );
