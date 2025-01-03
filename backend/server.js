@@ -19,6 +19,9 @@ app.use("/trivia", triviaRouter);
 app.use("/result", gameResultRouter);
 app.use("/profile", profileRouter);
 
+app.get("/", (req, res) => {
+  res.redirect("/auth");
+});
 app.use((req, res) => {
   res.status(404).send("Page wasn't found");
 });
