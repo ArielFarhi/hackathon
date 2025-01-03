@@ -14,7 +14,7 @@ const leaderboardSchema = new Schema({
             averageScore: { type: Number, default: 0 }, 
         },
     ],
-});
+}, { collection: "leaderboard" });
 
 // leaderboardSchema.methods.updateLeaderboard = async function () {
 //     this.players.forEach(player => {

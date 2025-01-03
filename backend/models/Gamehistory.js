@@ -12,7 +12,7 @@ const gameHistorySchema = new Schema({
     correctAnswers: { type: Number, required: true }, 
     score: { type: Number, required: true }, 
     duration: { type: Number, required: true }, 
-});
+}, { collection: "gamehistory" } );
 
 const GameHistory = model('GameHistory', gameHistorySchema);
 
