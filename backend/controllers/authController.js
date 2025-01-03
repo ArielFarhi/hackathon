@@ -2,9 +2,15 @@ const User = require("../models/User");
 const authController = {
   async register(req, res) {
     try {
-      const { username, email, password } = req.body;
+      const { name, username, email, password } = req.body;
       const image = `https://avatar.iran.liara.run/public/boy?username=${username}`;
-      const user = await User.create({ username, email, password, image });
+      const user = await User.create({
+        name,
+        username,
+        email,
+        password,
+        image,
+      });
       res.status(201).json({ user });
     } catch (error) {
       res.status(500).json({ message: error.message });

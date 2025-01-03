@@ -3,7 +3,7 @@ const { Router } = require("express");
 
 const authRouter = new Router();
 
-authRouter.get("/login", authController.login);
-authRouter.post("/register", authController.register);
+authRouter.get("/", authController.login);
+authRouter.post("/", authController.register);
 
 module.exports = { authRouter };
