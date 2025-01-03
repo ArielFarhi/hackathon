@@ -1,11 +1,14 @@
 const express = require("express");
 const app = express();
 const logger = require("morgan");
+const { authRouter } = require("./routers/authRouter");
 
 const port = process.env.PORT || 8080;
 
 app.use(express.json());
 app.use(logger("dev"));
+
+app.use("/auth", authRouter);
 
 app.use((req, res) => {
   res.status(404).send("Page wasn't found");
